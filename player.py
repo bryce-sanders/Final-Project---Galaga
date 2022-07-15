@@ -48,7 +48,7 @@ class Player:
         # If they are, increase the move counter until
         # it reaches 20 and then move them left.
         if is_key_down(KEY_LEFT):
-            if self.move_counter < 17:
+            if self.move_counter < 12:
                 self.move_counter += 1
             else:
                 x = self._position.get_x()
@@ -61,7 +61,7 @@ class Player:
         # If they are, increase the move counter until
         # it reaches 20 and then move them right.
         if is_key_down(KEY_RIGHT):
-            if self.move_counter < 17:
+            if self.move_counter < 12:
                 self.move_counter += 1
             else:
                 x = self._position.get_x()
@@ -71,11 +71,11 @@ class Player:
             return
 
     def fire(self):
-        if self.fire_counter < 1000:
+        if self.fire_counter < 800:
             self.fire_counter += 1
 
         if is_key_down(KEY_SPACE):
-            if self.fire_counter == 1000:
+            if self.fire_counter == 800:
                 bullet = PlayerBullet()
                 bullet.set_position(self._position)
                 self._bullets.append(bullet)

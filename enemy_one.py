@@ -55,7 +55,7 @@ class EnemyOne(Enemy):
 
     def advance_enemy(self):
         if self._dive == True:
-            if self._move_counter < 10:
+            if self._move_counter < 7:
                 self._move_counter += 1
             else:
                 y = self._position.get_y()

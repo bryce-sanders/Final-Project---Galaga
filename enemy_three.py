@@ -34,14 +34,14 @@ class EnemyThree(Enemy):
             print("\033[31m" + "Pew!" + "\033[39m")
 
     def random_dive(self):
-        maybe_dive = random.randint(1, 1000000)
+        maybe_dive = random.randint(1, 100000)
 
         if maybe_dive == 500:
             self._dive = True
 
     def advance_enemy(self):
         if self._dive == True:
-            if self._move_counter < 10:
+            if self._move_counter < 7:
                 self._move_counter += 1
             else:
                 y = self._position.get_y()

@@ -13,7 +13,7 @@ class EnemyBullet(Bullet):
         super().__init__()
 
     def advance(self):
-        if self.advance_counter < 5:
+        if self.advance_counter < 3:
             self.advance_counter += 1
         else:
             y = self._position.get_y()
